@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log('Hello World');
+
+        let tempFahrenheit = -57;
+
+        function convertToCelc(tempFahrenheit) {
+            return (tempFahrenheit - 32) * (5/9);    
+        };
+
+        let tempCelsius = Math.floor(convertToCelc(tempFahrenheit));
+
+        console.log(tempCelsius);
+
+        function convertToKelvin(tempCelsius) {
+            return (tempCelsius + 273.15);
+        };
+
+        let tempKelvin = Math.floor(convertToKelvin(tempCelsius));
+
+        console.log(tempKelvin);
+
+        let todaysForecast = `The current temparature outside is ${tempFahrenheit} degrees Fahrenheit, 
+        ${tempCelsius} degrees Celcius, and ${tempKelvin} degrees Kelvin.`;
+
+        console.log(todaysForecast);
+
+        console.log(typeof tempCelsius, typeof tempKelvin, typeof tempFahrenheit);
+
+        function fahrenheitConversionForecast(tempFahrenheit) {
+            let tempCelsius = Math.floor((tempFahrenheit - 32) * (5/9));
+            let tempKelvin = Math.floor(tempCelsius + 273.15);
+            let todaysForecast = `The current temparature outside is ${tempFahrenheit} degrees Fahrenheit, 
+            ${tempCelsius} degrees Celcius, and ${tempKelvin} degrees Kelvin.`;
+            return todaysForecast;
+        }
+
+        console.log(fahrenheitConversionForecast(75));
+
+        
+        
+        const myFirstName = 'Ron';
+        const myLastName = 'Swanson';
+        const myAge = 37;
+        const myBirthPlace = 'Syosset';
+
+        console.log(`Hello! My name is ${myFirstName} ${myLastName}! I'm ${myAge} 
+        years old, and I'm from ${myBirthPlace}. It's nice to meet you!`);
+
+        let firstInitial = (myFirstName[0]);
+        let lastInitial = (myLastName[0]);
+
+        console.log(`My initials are ${firstInitial}.${lastInitial}.`);
+
+        let nameLength = (myFirstName.length);
+
+        console.log(nameLength);
+
+        let upperName = `${myFirstName.toUpperCase()} ${myLastName.toUpperCase()}`
+
+        console.log(upperName);
+
+        function sayGreeting(myFirstName,myLastName,myAge,myBirthPlace) {
+            return `Hello! My name is ${myFirstName} ${myLastName}! I'm ${myAge} 
+        years old, and I'm from ${myBirthPlace}. It's nice to meet you!`
+        }
+
+        console.log(sayGreeting('Matt','Krichmar',37,'Syosset'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
